@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVANCE BJJ - Escuela de Brazilian Jiu Jitsu</title>
+    <meta name="description" content="AVANCE BJJ: Escuela minimalista de Brazilian Jiu Jitsu. Entrena con la mejor técnica en un ambiente limpio y profesional.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="assets/images/avance-logo.jpg" alt="AVANCE BJJ Logo" class="nav-logo">
+        </div>
+        <nav class="nav-links">
+            <a href="#about">Filosofía</a>
+            <a href="#schedule">Horarios</a>
+            <a href="#pricing">Membresías</a>
+            <a href="#location">Ubicación</a>
+            <a href="campamento.html" style="color: var(--accent-gold); font-weight: 700;">Campamento de Invierno</a>
+            <a href="https://www.instagram.com/avance.bjj/" target="_blank" class="cta-btn">Únete</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-content reveal">
+                <img src="assets/images/avance-logo.jpg" alt="AVANCE" class="hero-logo-large">
+                <h1 class="hero-title">EL ARTE DE AVANZAR</h1>
+                <p class="hero-subtitle">Brazilian Jiu Jitsu de alto rendimiento en un entorno minimalista y profesional.</p>
+                <a href="#pricing" class="btn-primary">Ver Planes</a>
+            </div>
+        </section>
+
+        <!-- About / Philosophy -->
+        <section class="about" id="about">
+            <div class="container reveal">
+                <h2 class="section-title">Nuestra Filosofía</h2>
+                <div class="divider"></div>
+                <p class="section-text">
+                    Creemos en la técnica pura, la disciplina y un entorno inmaculado. 
+                    AVANCE no es solo una academia; es un santuario para el crecimiento personal y marcial, inspirado en la elegancia del arte suave.
+                </p>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section class="schedule" id="schedule">
+            <div class="container reveal">
+                <h2 class="section-title">Horarios de Entrenamiento</h2>
+                <p class="section-subtitle">Lunes a Viernes</p>
+                <div class="divider"></div>
+                <div class="schedule-grid">
+                    <div class="schedule-card">
+                        <h3>Mañana</h3>
+                        <p class="time">06:30 - 07:30</p>
+                    </div>
+                    <div class="schedule-card">
+                        <h3>Mediodía</h3>
+                        <p class="time">12:00 - 13:00</p>
+                    </div>
+                    <div class="schedule-card">
+                        <h3>Noche</h3>
+                        <p class="time">19:00 - 20:00</p>
+                    </div>
+                    <div class="schedule-card" style="border-color: var(--accent-gold); border-width: 2px;">
+                        <h3>BJJ Kids</h3>
+                        <p class="time">18:00 - 19:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="container reveal">
+                <h2 class="section-title">Membresías</h2>
+                <p class="section-subtitle">Invierte en tu evolución</p>
+                <div class="divider"></div>
+                
+                <div class="pricing-cards">
+                    <div class="pricing-card standard">
+                        <h3>Mensual (Adultos / Kids)</h3>
+                        <div class="price">350 <span class="currency">Bs.</span></div>
+                        <ul class="features">
+                            <li>Acceso a todas las clases</li>
+                            <li>Entrenamiento Lunes a Viernes</li>
+                            <li>Acompañamiento técnico</li>
+                        </ul>
+                        <a href="https://wa.me/" class="btn-outline">Inscribirse</a>
+                    </div>
+                    <div class="pricing-card premium">
+                        <div class="badge">Recomendado</div>
+                        <h3>Trimestral</h3>
+                        <div class="price">950 <span class="currency">Bs.</span></div>
+                        <ul class="features">
+                            <li>Acceso a todas las clases</li>
+                            <li>Ahorro en la mensualidad</li>
+                            <li>Acompañamiento técnico</li>
+                        </ul>
+                        <a href="https://wa.me/" class="btn-primary">Inscribirse</a>
+                    </div>
+                    <div class="pricing-card standard">
+                        <h3>Semestral / Anual</h3>
+                        <div class="price">Consultar</div>
+                        <ul class="features">
+                            <li>El mayor ahorro a largo plazo</li>
+                            <li>Beneficios exclusivos AVANCE</li>
+                            <li>Seminarios con descuento</li>
+                        </ul>
+                        <a href="https://wa.me/" class="btn-outline">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="location" id="location">
+            <div class="container reveal">
+                <h2 class="section-title">Ubicación</h2>
+                <div class="divider"></div>
+                <p class="section-text">Ven a conocer nuestro tatami y experimenta el ambiente inmaculado de AVANCE.</p>
+                <a href="https://maps.app.goo.gl/aXupPoozcVVvxQYs5" target="_blank" class="location-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Ver en Google Maps
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer / Social -->
+    <footer>
+        <div class="container footer-content reveal">
+            <div class="footer-logo">
+                <img src="assets/images/avance-logo.jpg" alt="AVANCE BJJ" class="footer-logo-img">
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/avance.bjj/" target="_blank" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://www.facebook.com/avance.bjj" target="_blank" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="https://www.tiktok.com/@avance.bjj" target="_blank" aria-label="TikTok">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2026 AVANCE BJJ. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
