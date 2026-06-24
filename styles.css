@@ -241,6 +241,49 @@ h1, h2, h3 {
     background-color: var(--bg-primary);
 }
 
+.about-content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.about-text-container {
+    flex: 1.2;
+}
+
+.about-text-container .section-text {
+    text-align: left;
+    margin: 0;
+}
+
+.about-image-container {
+    flex: 1;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .about-text-container .section-text {
+        text-align: center;
+    }
+}
+
 /* Schedule Section */
 .schedule {
     background-color: #f2f2f2;
