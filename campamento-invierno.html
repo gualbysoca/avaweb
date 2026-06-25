@@ -179,6 +179,50 @@
             background-color: #f1f1f1;
             transition: background-color 0.2s ease;
         }
+        
+        .camp-cta-btn {
+            display: inline-block;
+            margin-bottom: 2rem; 
+            font-size: 1.25rem; 
+            padding: 1rem 2.5rem; 
+            background-color: var(--accent-gold); 
+            color: var(--accent-dark) !important; 
+            box-shadow: 0 10px 25px rgba(242, 194, 0, 0.4); 
+            text-transform: uppercase; 
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* Mobile Optimizations for Campamento */
+        @media (max-width: 768px) {
+            .camp-hero {
+                padding: 6rem 1rem 2rem;
+            }
+            .camp-cta-btn {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .table-container {
+                padding: 0 1rem;
+            }
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+            .time-col {
+                font-size: 0.8rem;
+            }
+            .tabs-nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .tab-btn {
+                width: 100%;
+                padding: 0.75rem 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -216,7 +260,7 @@
                 
                 <img src="assets/images/campamento-bjj-kids.jpg" alt="Afiche Campamento BJJ Kids" class="camp-poster reveal">
                 
-                <a href="https://wa.me/59174580219" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-bottom: 2rem; font-size: 1.25rem; padding: 1rem 2.5rem; background-color: var(--accent-gold); color: var(--accent-dark); box-shadow: 0 10px 25px rgba(242, 194, 0, 0.4); text-transform: uppercase; font-weight: 700;">¡Reserva tu Cupo por WhatsApp!</a>
+                <a href="https://wa.me/59174580219" target="_blank" rel="noopener noreferrer" class="btn-primary camp-cta-btn">¡Reserva tu Cupo por WhatsApp!</a>
             </div>
         </section>
 
