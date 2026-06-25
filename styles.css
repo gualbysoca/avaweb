@@ -3,7 +3,8 @@
     --bg-secondary: #fafafa;
     --text-main: #111111;
     --text-muted: #666666;
-    --accent-gold: #f2c200; /* Gold from the logo */
+    --accent-gold: #f2c200;
+    /* Gold from the logo */
     --accent-dark: #000000;
     --border-color: #eaeaea;
     --font-heading: 'Outfit', sans-serif;
@@ -47,7 +48,9 @@ ul {
 }
 
 /* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-heading);
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -84,7 +87,7 @@ h1, h2, h3 {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1.5rem 4rem;
+    padding: 0.1rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,13 +99,13 @@ h1, h2, h3 {
 }
 
 .navbar.scrolled {
-    padding: 1rem 4rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .nav-logo {
-    height: 40px;
+    height: 70px;
     width: auto;
+    mix-blend-mode: multiply;
 }
 
 .nav-links {
@@ -146,25 +149,40 @@ h1, h2, h3 {
     color: var(--accent-dark);
 }
 
-/* Hero Section */
-.hero {
+/* Hero Carousel Section */
+.hero-carousel-container {
     height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
-    background-image: url('assets/images/bjj-hero.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-color: #000000;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    z-index: 1;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75));
 }
 
 .hero-content {
@@ -175,7 +193,7 @@ h1, h2, h3 {
 }
 
 .hero-logo-large {
-    width: 180px;
+    width: 200px;
     margin-bottom: 2rem;
 }
 
@@ -196,7 +214,7 @@ h1, h2, h3 {
     font-weight: 300;
 }
 
-.hero .btn-primary {
+.carousel-slide .btn-primary {
     display: inline-block;
     background-color: var(--accent-gold);
     color: var(--accent-dark);
@@ -210,11 +228,36 @@ h1, h2, h3 {
     border-radius: 4px;
 }
 
-.hero .btn-primary:hover {
+.carousel-slide .btn-primary:hover {
     background-color: #ffffff;
     color: var(--accent-dark);
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.dot.active,
+.dot:hover {
+    background-color: var(--accent-gold);
+    transform: scale(1.2);
 }
 
 .btn-outline {
@@ -239,6 +282,50 @@ h1, h2, h3 {
 /* About Section */
 .about {
     background-color: var(--bg-primary);
+}
+
+.about-content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.about-text-container {
+    flex: 1.2;
+}
+
+.about-text-container .section-text {
+    text-align: justify;
+    margin: 0;
+}
+
+.about-image-container {
+    flex: 1;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .about-text-container .section-text {
+        text-align: center;
+    }
 }
 
 /* Schedule Section */
@@ -276,7 +363,7 @@ h1, h2, h3 {
 
 .schedule-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
 }
 
 .schedule-card:hover::before {
@@ -290,7 +377,7 @@ h1, h2, h3 {
 }
 
 .schedule-card .time {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     font-family: var(--font-heading);
     color: var(--text-muted);
@@ -303,10 +390,84 @@ h1, h2, h3 {
 
 .pricing-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
     margin-top: 4rem;
     align-items: stretch;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.price-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.reg-price {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.discount-badge {
+    background-color: #e6f7ed;
+    color: #27ae60;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.savings {
+    font-weight: 600;
+    color: var(--accent-dark);
+}
+
+.pricing-conditions {
+    max-width: 600px;
+    margin: 4rem auto 0;
+    text-align: left;
+    padding: 2rem;
+    background: #fafafa;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.pricing-conditions h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.pricing-conditions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-conditions li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.pricing-conditions li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+    font-weight: bold;
 }
 
 .pricing-card {
@@ -322,13 +483,13 @@ h1, h2, h3 {
 
 .pricing-card.premium {
     border-color: var(--accent-gold);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
     transform: scale(1.05);
 }
 
 .pricing-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .pricing-card.premium:hover {
@@ -366,7 +527,7 @@ h1, h2, h3 {
 }
 
 .price .currency {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--text-muted);
 }
@@ -419,7 +580,7 @@ h1, h2, h3 {
 footer {
     background-color: #050505;
     color: #fff;
-    padding: 4rem 0 2rem;
+    padding: 0 0 2rem;
 }
 
 .footer-content {
@@ -427,10 +588,10 @@ footer {
 }
 
 .footer-logo-img {
-    height: 50px;
+    height: 150px;
     filter: grayscale(100%) brightness(200%);
     opacity: 0.5;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     transition: var(--transition-smooth);
 }
 
@@ -447,7 +608,7 @@ footer {
 }
 
 .social-links a {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     transition: var(--transition-smooth);
 }
 
@@ -457,7 +618,7 @@ footer {
 }
 
 .copyright {
-    color: rgba(255,255,255,0.3);
+    color: rgba(255, 255, 255, 0.3);
     font-size: 0.9rem;
 }
 
@@ -478,6 +639,7 @@ footer {
     .pricing-card.premium {
         transform: none;
     }
+
     .pricing-card.premium:hover {
         transform: translateY(-5px);
     }
@@ -487,12 +649,15 @@ footer {
     .navbar {
         padding: 1rem 2rem;
     }
+
     .nav-links {
         display: none;
     }
+
     .hero-title {
         font-size: 3rem;
     }
+
     .section-title {
         font-size: 2rem;
     }
