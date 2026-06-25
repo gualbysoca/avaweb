@@ -152,13 +152,19 @@
             </a>
         </div>
         <nav class="nav-links" role="navigation" aria-label="Navegación principal">
-            <a href="#about">Filosofía</a>
-            <a href="#schedule">Horarios</a>
-            <a href="#pricing">Membresías</a>
-            <a href="#location">Ubicación</a>
-            <a href="campamento-invierno.html" style="color: var(--accent-gold); font-weight: 700;">Campamento BJJ
-                Kids</a>
-            <a href="https://wa.me/59174580219" target="_blank" rel="noopener noreferrer" class="cta-btn">Únete</a>
+            <a href="#about" data-i18n="nav_philosophy">Filosofía</a>
+            <a href="#schedule" data-i18n="nav_schedule">Horarios</a>
+            <a href="#pricing" data-i18n="nav_pricing">Membresías</a>
+            <a href="#location" data-i18n="nav_location">Ubicación</a>
+            <a href="campamento-invierno.html" style="color: var(--accent-gold); font-weight: 700;" data-i18n="nav_camp">Campamento BJJ Kids</a>
+            <a href="https://wa.me/59174580219" target="_blank" rel="noopener noreferrer" class="cta-btn" data-i18n="nav_join">Únete</a>
+            <div class="lang-selector">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <span>|</span>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <span>|</span>
+                <button class="lang-btn" data-lang="pt">PT</button>
+            </div>
         </nav>
         <div class="hamburger" aria-label="Abrir menú" role="button">
             <span class="bar"></span>
@@ -175,9 +181,9 @@
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
                     <img src="assets/images/avance-logo-circular.png" alt="AVANCE" class="hero-logo-large">
-                    <h1 class="hero-title">LO MÁS PRUDENTE</h1>
-                    <p class="hero-subtitle">ES ATREVERSE...</p>
-                    <a href="#pricing" class="btn-primary">Ver Planes</a>
+                    <h1 class="hero-title" data-i18n="hero_title">LO MÁS PRUDENTE</h1>
+                    <p class="hero-subtitle" data-i18n="hero_desc">ES ATREVERSE...</p>
+                    <a href="#pricing" class="btn-primary" data-i18n="price_title">Ver Planes</a>
                 </div>
             </div>
 
@@ -185,9 +191,9 @@
             <div class="carousel-slide" style="background-image: url('assets/images/banner-campamento.png');">
                 <div class="hero-overlay" style="background: rgba(0, 0, 0, 0.75);"></div>
                 <div class="hero-content">
-                    <h2 class="hero-title" style="color: var(--accent-gold);">CAMPAMENTO DE INVIERNO</h2>
-                    <p class="hero-subtitle" style="color: #ffffff;">JIU JITSU KIDS · Inicio 06 de Julio</p>
-                    <a href="campamento-invierno.html" class="btn-primary">Ver Cronograma</a>
+                    <h2 class="hero-title" style="color: var(--accent-gold);" data-i18n="camp_title">CAMPAMENTO DE INVIERNO</h2>
+                    <p class="hero-subtitle" style="color: #ffffff;" data-i18n="camp_subtitle">JIU JITSU KIDS · Inicio 06 de Julio</p>
+                    <a href="campamento-invierno.html" class="btn-primary" data-i18n="camp_schedule_title">Ver Cronograma</a>
                 </div>
             </div>
 
@@ -201,11 +207,11 @@
         <!-- About / Philosophy -->
         <section class="about" id="about">
             <div class="container reveal">
-                <h2 class="section-title">Nuestra Filosofía</h2>
+                <h2 class="section-title" data-i18n="phil_title">Nuestra Filosofía</h2>
                 <div class="divider"></div>
                 <div class="about-content">
                     <div class="about-text-container">
-                        <p class="section-text">
+                        <p class="section-text" data-i18n="phil_text1">
                             En AVANCE buscamos brindar, a personas de todas las edades, la oportunidad de aprender y
                             practicar
                             Jiu Jitsu en un ambiente seguro y respetuoso. Nos esforzamos por promover el desarrollo
@@ -214,7 +220,7 @@
                             en
                             equipo.
                         </p>
-                        <p class="section-text" style="margin-top: 1.5rem;">
+                        <p class="section-text" style="margin-top: 1.5rem;" data-i18n="phil_text2">
                             Nuestro objetivo es transferir conocimiento a nuestros alumnos para que adquieran
                             habilidades
                             efectivas
@@ -236,24 +242,24 @@
         <!-- Schedule Section -->
         <section class="schedule" id="schedule">
             <div class="container reveal">
-                <h2 class="section-title">Horarios de Entrenamiento</h2>
-                <p class="section-subtitle">Lunes a Viernes</p>
+                <h2 class="section-title" data-i18n="sched_title">Horarios de Entrenamiento</h2>
+                <p class="section-subtitle" data-i18n="sched_subtitle">Lunes a Viernes</p>
                 <div class="divider"></div>
                 <div class="schedule-grid">
                     <div class="schedule-card">
-                        <h3>Mañana</h3>
+                        <h3 data-i18n="sched_morning">Mañana</h3>
                         <p class="time">06:30 - 07:30</p>
                     </div>
                     <div class="schedule-card">
-                        <h3>Mediodía</h3>
+                        <h3 data-i18n="sched_noon">Mediodía</h3>
                         <p class="time">12:00 - 13:00</p>
                     </div>
                     <div class="schedule-card" style="border-color: var(--accent-gold); border-width: 2px;">
-                        <h3>BJJ Kids</h3>
+                        <h3 data-i18n="sched_kids">BJJ Kids</h3>
                         <p class="time">18:00 - 19:00</p>
                     </div>
                     <div class="schedule-card">
-                        <h3>Noche</h3>
+                        <h3 data-i18n="sched_night">Noche</h3>
                         <p class="time">19:00 - 20:00</p>
                     </div>
 
@@ -264,84 +270,114 @@
         <!-- Pricing Section -->
         <section class="pricing" id="pricing">
             <div class="container reveal">
-                <h2 class="section-title">Membresías</h2>
-                <p class="section-subtitle">Invierte en tu evolución</p>
+                <h2 class="section-title" data-i18n="price_title">Membresías</h2>
+                <p class="section-subtitle" data-i18n="price_subtitle">Invierte en tu evolución</p>
                 <div class="divider"></div>
 
                 <div class="pricing-cards">
                     <!-- Mensual -->
                     <div class="pricing-card standard">
-                        <h3>Mensual</h3>
-                        <p class="card-subtitle">Adultos / Kids</p>
+                        <h3 data-i18n="price_monthly">Mensual</h3>
+                        <p class="card-subtitle" data-i18n="price_target_adults_kids">Adultos / Kids</p>
                         <div class="price">350 <span class="currency">Bs.</span></div>
                         <ul class="features">
-                            <li>Acceso a todas las clases y horarios</li>
+                            <li data-i18n="price_feat_all_classes">Acceso a todas las clases y horarios</li>
                         </ul>
-                        <a href="https://wa.me/59174580219" target="_blank" class="btn-outline">Inscribirse</a>
+                        <a href="https://wa.me/59174580219" target="_blank" class="btn-outline" data-i18n="price_enroll">Inscribirse</a>
                     </div>
 
                     <!-- Trimestral -->
                     <div class="pricing-card standard">
-                        <h3>Trimestral</h3>
-                        <p class="card-subtitle">Plan 3 meses</p>
+                        <h3 data-i18n="price_quarterly">Trimestral</h3>
+                        <p class="card-subtitle" data-i18n="price_target_3_months">Plan 3 meses</p>
                         <div class="price">892,50 <span class="currency">Bs.</span></div>
                         <div class="price-details">
-                            <span class="reg-price">Regular: 1.050 Bs</span>
+                            <span class="reg-price"><span data-i18n="price_regular">Regular:</span> 1.050 Bs</span>
                             <span class="discount-badge">-15%</span>
-                            <span class="savings">Ahorro: 157,50 Bs</span>
+                            <span class="savings"><span data-i18n="price_savings">Ahorro:</span> 157,50 Bs</span>
                         </div>
                         <ul class="features">
-                            <li>Acceso completo a todas las clases y horarios</li>
+                            <li data-i18n="price_feat_all_classes">Acceso completo a todas las clases y horarios</li>
                             <li>Pago trimestral adelantado</li>
                         </ul>
-                        <a href="https://wa.me/59174580219" target="_blank" class="btn-outline">Inscribirse</a>
+                        <a href="https://wa.me/59174580219" target="_blank" class="btn-outline" data-i18n="price_enroll">Inscribirse</a>
                     </div>
 
                     <!-- Semestral -->
                     <div class="pricing-card premium">
-                        <div class="badge">Recomendado</div>
-                        <h3>Semestral</h3>
-                        <p class="card-subtitle">Plan 6 meses</p>
+                        <div class="badge" data-i18n="price_recommended">Recomendado</div>
+                        <h3 data-i18n="price_semiannual">Semestral</h3>
+                        <p class="card-subtitle" data-i18n="price_target_6_months">Plan 6 meses</p>
                         <div class="price">1.680 <span class="currency">Bs.</span></div>
                         <div class="price-details">
-                            <span class="reg-price">Regular: 2.100 Bs</span>
+                            <span class="reg-price"><span data-i18n="price_regular">Regular:</span> 2.100 Bs</span>
                             <span class="discount-badge">-20%</span>
-                            <span class="savings">Ahorro: 420 Bs</span>
+                            <span class="savings"><span data-i18n="price_savings">Ahorro:</span> 420 Bs</span>
                         </div>
                         <ul class="features">
-                            <li>Acceso completo a todas las clases y horarios</li>
-                            <li>Congelamiento (1 vez)</li>
+                            <li data-i18n="price_feat_all_classes">Acceso completo a todas las clases y horarios</li>
+                            <li data-i18n="price_feat_freeze_1">Congelamiento (1 vez)</li>
                         </ul>
-                        <a href="https://wa.me/59174580219" target="_blank" class="btn-primary">Inscribirse</a>
+                        <a href="https://wa.me/59174580219" target="_blank" class="btn-primary" data-i18n="price_enroll">Inscribirse</a>
                     </div>
 
                     <!-- Anual -->
                     <div class="pricing-card standard">
-                        <h3>Anual</h3>
-                        <p class="card-subtitle">Plan 12 meses</p>
+                        <h3 data-i18n="price_annual">Anual</h3>
+                        <p class="card-subtitle" data-i18n="price_target_12_months">Plan 12 meses</p>
                         <div class="price">2.940 <span class="currency">Bs.</span></div>
                         <div class="price-details">
-                            <span class="reg-price">Regular: 4.200 Bs</span>
+                            <span class="reg-price"><span data-i18n="price_regular">Regular:</span> 4.200 Bs</span>
                             <span class="discount-badge">-30%</span>
-                            <span class="savings">Ahorro: 1.260 Bs</span>
+                            <span class="savings"><span data-i18n="price_savings">Ahorro:</span> 1.260 Bs</span>
                         </div>
                         <ul class="features">
-                            <li>El mayor beneficio y ahorro</li>
-                            <li>Congelamiento flexible</li>
+                            <li data-i18n="price_feat_best_value">El mayor beneficio y ahorro</li>
+                            <li data-i18n="price_feat_flexible_freeze">Congelamiento flexible</li>
                         </ul>
-                        <a href="https://wa.me/59174580219" target="_blank" class="btn-outline">Inscribirse</a>
+                        <a href="https://wa.me/59174580219" target="_blank" class="btn-outline" data-i18n="price_enroll">Inscribirse</a>
                     </div>
                 </div>
 
             </div>
         </section>
 
+        <!-- Comodidades Section -->
+        <section class="amenities" id="amenities">
+            <div class="container reveal">
+                <h2 class="section-title" data-i18n="amenities_title">Comodidades</h2>
+                <div class="divider"></div>
+                <div class="amenities-grid">
+                    <div class="amenity-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                        <span data-i18n="amenities_parking">Parqueo</span>
+                    </div>
+                    <div class="amenity-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a8 8 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+                        <span data-i18n="amenities_lockers">Vestidores</span>
+                    </div>
+                    <div class="amenity-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v1.5A2.5 2.5 0 0 0 6.5 8h11A2.5 2.5 0 0 0 20 5.5V4"/><path d="M10 16v.01"/><path d="M14 17v.01"/><path d="M10 12v.01"/><path d="M14 13v.01"/><path d="M10 20v.01"/><path d="M14 21v.01"/></svg>
+                        <span data-i18n="amenities_showers">Duchas</span>
+                    </div>
+                    <div class="amenity-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
+                        <span data-i18n="amenities_snacks">Snacks</span>
+                    </div>
+                    <div class="amenity-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0Z"/><path d="M4 18v2"/><path d="M20 18v2"/><path d="M12 4v9"/></svg>
+                        <span data-i18n="amenities_waiting">Área de Espera</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Location Section -->
         <section class="location" id="location">
             <div class="container reveal">
-                <h2 class="section-title">Ubicación</h2>
+                <h2 class="section-title" data-i18n="loc_title">Ubicación</h2>
                 <div class="divider"></div>
-                <p class="section-text">Ven a conocer nuestras nuevas instalaciones, solicita tu día de prueba y
+                <p class="section-text" data-i18n="loc_desc">Ven a conocer nuestras nuevas instalaciones, solicita tu día de prueba y
                     experimenta el ambiente de AVANCE BJJ.</p>
                 <a href="https://maps.app.goo.gl/aXupPoozcVVvxQYs5" target="_blank" class="location-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -349,7 +385,7 @@
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                         <circle cx="12" cy="10" r="3"></circle>
                     </svg>
-                    Ver en Google Maps
+                    <span data-i18n="loc_btn">Ver en Google Maps</span>
                 </a>
             </div>
         </section>
@@ -386,10 +422,11 @@
                     </svg>
                 </a>
             </div>
-            <p class="copyright">&copy; 2026 AVANCE BJJ. Santa Cruz de la Sierra - Bolivia.</p>
+            <p class="copyright">&copy; 2026 AVANCE BJJ. Santa Cruz de la Sierra - Bolivia. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="app.js"></script>
 </body>
 

@@ -1,4 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // i18n Logic
+    const savedLang = localStorage.getItem('ava_lang') || 'es';
+    let currentLang = savedLang;
+
+    const setLanguage = (lang) => {
+        if (!translations[lang]) return;
+        currentLang = lang;
+        localStorage.setItem('ava_lang', lang);
+
+        document.documentElement.lang = lang;
+
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                // If it's a placeholder (for inputs), else text content
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = translations[lang][key];
+                } else {
+                    el.textContent = translations[lang][key];
+                }
+            }
+        });
+
+        // Update active class on selectors
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            if (btn.dataset.lang === lang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+    };
+
+    // Attach to language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            setLanguage(btn.dataset.lang);
+        });
+    });
+
+    // Initialize Language
+    if (typeof translations !== 'undefined') {
+        setLanguage(currentLang);
+    }
+
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
@@ -24,6 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
             });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
         });
     }
 
@@ -118,5 +173,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (slides.length > 0) {
         startCarousel();
+    }
+
+    // Lightbox Logic for Camp Poster
+    const campPoster = document.querySelector('.camp-poster');
+    if (campPoster) {
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox-overlay';
+        
+        const lightboxImg = document.createElement('img');
+        lightboxImg.className = 'lightbox-img';
+        
+        const closeBtn = document.createElement('div');
+        closeBtn.className = 'lightbox-close';
+        closeBtn.innerHTML = '&times;';
+
+        lightbox.appendChild(lightboxImg);
+        lightbox.appendChild(closeBtn);
+        document.body.appendChild(lightbox);
+
+        campPoster.style.cursor = 'pointer';
+
+        campPoster.addEventListener('click', () => {
+            lightboxImg.src = campPoster.src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                closeLightbox();
+            }
+        });
     }
 });
