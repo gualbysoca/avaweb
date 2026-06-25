@@ -1,4 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // i18n Logic
+    const savedLang = localStorage.getItem('ava_lang') || 'es';
+    let currentLang = savedLang;
+
+    const setLanguage = (lang) => {
+        if (!translations[lang]) return;
+        currentLang = lang;
+        localStorage.setItem('ava_lang', lang);
+
+        document.documentElement.lang = lang;
+
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                // If it's a placeholder (for inputs), else text content
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = translations[lang][key];
+                } else {
+                    el.textContent = translations[lang][key];
+                }
+            }
+        });
+
+        // Update active class on selectors
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            if (btn.dataset.lang === lang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+    };
+
+    // Attach to language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            setLanguage(btn.dataset.lang);
+        });
+    });
+
+    // Initialize Language
+    if (typeof translations !== 'undefined') {
+        setLanguage(currentLang);
+    }
+
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
