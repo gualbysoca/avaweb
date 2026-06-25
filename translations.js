@@ -15,8 +15,8 @@ const translations = {
         // Philosophy
         phil_title: "Nuestra Filosofía",
         phil_subtitle: "Más que un deporte, un estilo de vida",
-        phil_text1: "En AVANCE BJJ, creemos que el Jiu Jitsu es una herramienta para el desarrollo personal. Fomentamos el respeto, la disciplina y el trabajo en equipo.",
-        phil_text2: "Nuestro objetivo es transferir conocimiento a nuestros alumnos para que adquieran habilidades efectivas de defensa personal y convertirnos en la academia especializada en Brazilian Jiu Jitsu de referencia en la ciudad de Santa Cruz, reconocida por su excelencia en la enseñanza y su comunidad unida y comprometida.",
+        phil_text1: "En AVANCE buscamos brindar, a personas de todas las edades, la oportunidad de aprender y practicar Jiu Jitsu en un ambiente seguro y respetuoso. Aquí nos esforzamos por promover el desarrollo mental, físico y emocional de nuestros estudiantes, fomentando en ellos la confianza en sí mismos y el trabajo en equipo.",
+        phil_text2: "Nuestro objetivo es transferir conocimiento a nuestros alumnos para que adquieran habilidades efectivas de defensa personal y convertirnos así en la academia, especializada en Brazilian Jiu Jitsu, de referencia en la ciudad de Santa Cruz.",
         
         // Schedule
         sched_title: "Horarios de Entrenamiento",
@@ -53,6 +53,11 @@ const translations = {
         amenities_showers: "Duchas",
         amenities_snacks: "Snacks",
         amenities_waiting: "Área de Espera",
+        amenities_shop: "Tienda",
+        
+        // Store
+        store_title: "Tienda",
+        store_desc: "Explora nuestro catálogo exclusivo de Gis y equipamiento. Hojea nuestro catálogo virtual a continuación.",
         
         // Location
         loc_title: "Ubicación",
@@ -62,37 +67,10 @@ const translations = {
         // Footer
         footer_rights: "Todos los derechos reservados.",
         
-        // Campamento
-        camp_back: "Volver a Inicio",
+        // Campamento (for main page hero slide)
         camp_title: "Campamento de Invierno BJJ Kids",
         camp_subtitle: "Disciplina, respeto y evolución para los más pequeños",
-        camp_cta: "¡Reserva tu Cupo por WhatsApp!",
-        camp_schedule_title: "Cronograma de Actividades",
-        camp_week1: "Semana 1",
-        camp_week2: "Semana 2",
-        
-        // Table Headers
-        th_time: "HORA",
-        th_mon: "LUNES",
-        th_tue: "MARTES",
-        th_wed: "MIÉRCOLES",
-        th_thu: "JUEVES",
-        th_fri: "VIERNES",
-        
-        // Activities
-        act_warmup: "Calentamiento y juegos de agilidad",
-        act_takedowns: "Técnicas de pie (Derribos)",
-        act_ground: "Técnicas de suelo (Pases de guardia)",
-        act_rolls: "Luchas (Rolls)",
-        act_stretching: "Estiramientos y cierre",
-        act_submission: "Finalizaciones básicas",
-        act_escapes: "Escapes de posiciones de control",
-        act_drills: "Drills de agilidad y coordinación",
-        act_competition: "Día de competencia simulada (Medallas)",
-        act_games: "Juegos aplicados al BJJ",
-        act_selfdefense: "Defensa Personal Básica",
-        act_review: "Repaso general y examen de progreso",
-        act_party: "Fiesta de cierre del campamento"
+        camp_schedule_title: "Cronograma de Actividades"
     },
     en: {
         nav_philosophy: "Philosophy",
@@ -107,8 +85,8 @@ const translations = {
         
         phil_title: "Our Philosophy",
         phil_subtitle: "More than a sport, a lifestyle",
-        phil_text1: "At AVANCE BJJ, we believe Jiu Jitsu is a tool for personal development. We foster respect, discipline, and teamwork.",
-        phil_text2: "Our goal is to transfer knowledge to our students so they acquire effective self-defense skills and to become the reference Brazilian Jiu Jitsu academy in Santa Cruz, recognized for its excellence in teaching and its united, committed community.",
+        phil_text1: "At AVANCE, we seek to offer people of all ages the opportunity to learn and practice Jiu Jitsu in a safe and respectful environment. Here we strive to promote the mental, physical, and emotional development of our students, fostering in them self-confidence and teamwork.",
+        phil_text2: "Our goal is to transfer knowledge to our students so they acquire effective self-defense skills and thus become the benchmark Brazilian Jiu Jitsu academy in Santa Cruz.",
         
         sched_title: "Training Schedule",
         sched_subtitle: "Monday to Friday",
@@ -142,6 +120,11 @@ const translations = {
         amenities_showers: "Showers",
         amenities_snacks: "Snacks",
         amenities_waiting: "Waiting Area",
+        amenities_shop: "Shop",
+        
+        // Store
+        store_title: "Store",
+        store_desc: "Explore our exclusive catalog of Gis and equipment. Flip through our virtual catalog below.",
         
         loc_title: "Location",
         loc_desc: "Come see our new facilities, request your trial day and experience the AVANCE BJJ environment.",
@@ -149,34 +132,10 @@ const translations = {
         
         footer_rights: "All rights reserved.",
         
-        camp_back: "Back to Home",
+        // Campamento (for main page hero slide)
         camp_title: "Winter BJJ Kids Camp",
         camp_subtitle: "Discipline, respect, and evolution for the little ones",
-        camp_cta: "Reserve your Spot via WhatsApp!",
-        camp_schedule_title: "Activity Schedule",
-        camp_week1: "Week 1",
-        camp_week2: "Week 2",
-        
-        th_time: "TIME",
-        th_mon: "MONDAY",
-        th_tue: "TUESDAY",
-        th_wed: "WEDNESDAY",
-        th_thu: "THURSDAY",
-        th_fri: "FRIDAY",
-        
-        act_warmup: "Warm-up and agility games",
-        act_takedowns: "Stand-up techniques (Takedowns)",
-        act_ground: "Ground techniques (Guard passes)",
-        act_rolls: "Sparring (Rolls)",
-        act_stretching: "Stretching and closing",
-        act_submission: "Basic submissions",
-        act_escapes: "Escapes from control positions",
-        act_drills: "Agility and coordination drills",
-        act_competition: "Simulated competition day (Medals)",
-        act_games: "BJJ applied games",
-        act_selfdefense: "Basic Self-Defense",
-        act_review: "General review and progress test",
-        act_party: "Camp closing party"
+        camp_schedule_title: "Activity Schedule"
     },
     pt: {
         nav_philosophy: "Filosofia",
@@ -191,8 +150,8 @@ const translations = {
         
         phil_title: "Nossa Filosofia",
         phil_subtitle: "Mais que um esporte, um estilo de vida",
-        phil_text1: "Na AVANCE BJJ, acreditamos que o Jiu Jitsu é uma ferramenta para o desenvolvimento pessoal. Promovemos o respeito, a disciplina e o trabalho em equipe.",
-        phil_text2: "Nosso objetivo é transferir conhecimento aos nossos alunos para que adquiram habilidades eficazes de defesa pessoal e nos tornarmos a academia especializada em Brazilian Jiu Jitsu de referência em Santa Cruz, reconhecida por sua excelência no ensino e sua comunidade unida e comprometida.",
+        phil_text1: "Na AVANCE buscamos proporcionar, a pessoas de todas as idades, a oportunidade de aprender e praticar Jiu Jitsu em um ambiente seguro e respeitoso. Aqui nos esforçamos para promover o desenvolvimento mental, físico e emocional de nossos alunos, fomentando neles a autoconfiança e o trabalho em equipe.",
+        phil_text2: "Nosso objetivo é transferir conhecimento aos nossos alunos para que adquiram habilidades eficazes de defesa pessoal e assim nos tornarmos a academia, especializada em Brazilian Jiu Jitsu, de referência na cidade de Santa Cruz.",
         
         sched_title: "Horários de Treino",
         sched_subtitle: "Segunda a Sexta",
@@ -226,6 +185,11 @@ const translations = {
         amenities_showers: "Duchas",
         amenities_snacks: "Lanches",
         amenities_waiting: "Área de Espera",
+        amenities_shop: "Loja",
+        
+        // Store
+        store_title: "Loja",
+        store_desc: "Explore nosso catálogo exclusivo de Gis e equipamentos. Folheie nosso catálogo virtual abaixo.",
         
         loc_title: "Localização",
         loc_desc: "Venha conhecer nossas novas instalações, solicite seu dia experimental e sinta o ambiente da AVANCE BJJ.",
@@ -233,33 +197,9 @@ const translations = {
         
         footer_rights: "Todos os direitos reservados.",
         
-        camp_back: "Voltar ao Início",
+        // Campamento (for main page hero slide)
         camp_title: "Acampamento de Inverno BJJ Kids",
         camp_subtitle: "Disciplina, respeito e evolução para os pequenos",
-        camp_cta: "Reserve sua Vaga pelo WhatsApp!",
-        camp_schedule_title: "Cronograma de Atividades",
-        camp_week1: "Semana 1",
-        camp_week2: "Semana 2",
-        
-        th_time: "HORA",
-        th_mon: "SEGUNDA",
-        th_tue: "TERÇA",
-        th_wed: "QUARTA",
-        th_thu: "QUINTA",
-        th_fri: "SEXTA",
-        
-        act_warmup: "Aquecimento e jogos de agilidade",
-        act_takedowns: "Técnicas em pé (Quedas)",
-        act_ground: "Técnicas de solo (Passagens de guarda)",
-        act_rolls: "Lutas (Rolas)",
-        act_stretching: "Alongamentos e encerramento",
-        act_submission: "Finalizações básicas",
-        act_escapes: "Escapes de posições de controle",
-        act_drills: "Drills de agilidade e coordenação",
-        act_competition: "Dia de competição simulada (Medalhas)",
-        act_games: "Jogos aplicados ao BJJ",
-        act_selfdefense: "Defesa Pessoal Básica",
-        act_review: "Revisão geral e teste de progresso",
-        act_party: "Festa de encerramento do acampamento"
+        camp_schedule_title: "Cronograma de Atividades"
     }
 };
