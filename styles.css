@@ -144,9 +144,30 @@ h3 {
     border-radius: 4px;
 }
 
-.cta-btn:hover {
-    background-color: var(--accent-gold);
-    color: var(--accent-dark);
+.nav-links a.cta-btn:hover {
+    background-color: transparent;
+    color: var(--accent-gold);
+}
+
+/* Hamburger Menu (Hidden by default) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--text-main);
+    border-radius: 3px;
+}
+
+.navbar.scrolled .hamburger .bar {
+    background-color: var(--text-main);
 }
 
 /* Hero Carousel Section */
@@ -647,11 +668,61 @@ footer {
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 1rem 2rem;
+        padding: 0.5rem 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
+    .logo-container {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        padding-left: 25px; /* Offset the hamburger width to perfectly center */
+    }
+
+    .nav-logo {
+        height: 40px; /* Make logo smaller on mobile */
+    }
+
+    /* Hamburger Menu display */
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Mobile Nav Dropdown */
     .nav-links {
-        display: none;
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        display: block;
     }
 
     .hero-title {
