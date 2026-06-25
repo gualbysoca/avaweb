@@ -25,6 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.classList.remove('active');
             });
         });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
     }
 
     // Reveal elements on scroll
@@ -118,5 +126,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (slides.length > 0) {
         startCarousel();
+    }
+
+    // Lightbox Logic for Camp Poster
+    const campPoster = document.querySelector('.camp-poster');
+    if (campPoster) {
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox-overlay';
+        
+        const lightboxImg = document.createElement('img');
+        lightboxImg.className = 'lightbox-img';
+        
+        const closeBtn = document.createElement('div');
+        closeBtn.className = 'lightbox-close';
+        closeBtn.innerHTML = '&times;';
+
+        lightbox.appendChild(lightboxImg);
+        lightbox.appendChild(closeBtn);
+        document.body.appendChild(lightbox);
+
+        campPoster.style.cursor = 'pointer';
+
+        campPoster.addEventListener('click', () => {
+            lightboxImg.src = campPoster.src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                closeLightbox();
+            }
+        });
     }
 });
