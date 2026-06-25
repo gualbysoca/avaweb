@@ -3,10 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campamento de Invierno BJJ Kids - AVANCE</title>
+    <title>Campamento de Invierno BJJ Kids 2026 - AVANCE BJJ Santa Cruz</title>
+    <meta name="description" content="Campamento de Vacaciones de Invierno Jiu Jitsu Kids en AVANCE BJJ, Santa Cruz de la Sierra. Del 6 al 17 de julio 2026. Entrenamiento, disciplina y diversión para niños. ¡Cupo limitado a 15 alumnos!">
+    <meta name="keywords" content="campamento BJJ kids, Jiu Jitsu niños, vacaciones invierno, Santa Cruz de la Sierra, AVANCE BJJ, artes marciales niños, campamento deportivo Bolivia">
+    <meta name="author" content="AVANCE BJJ">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://avancebjj.com/campamento-invierno.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://avancebjj.com/campamento-invierno.html">
+    <meta property="og:title" content="Campamento de Invierno BJJ Kids 2026 - AVANCE BJJ">
+    <meta property="og:description" content="Campamento de Jiu Jitsu para niños. Del 6 al 17 de julio. Entrenamiento, disciplina y diversión. ¡Cupo limitado!">
+    <meta property="og:image" content="https://avancebjj.com/assets/images/campamento-bjj-kids.jpg">
+    <meta property="og:locale" content="es_BO">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- JSON-LD: Event -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Campamento de Vacaciones de Invierno - Jiu Jitsu Kids",
+        "description": "Campamento de Jiu Jitsu para niños en AVANCE BJJ. Entrenamiento, disciplina y diversión en vacaciones. Juegos y actividades diseñadas para desarrollar confianza, coordinación y trabajo en equipo.",
+        "startDate": "2026-07-06T10:00:00-04:00",
+        "endDate": "2026-07-17T11:30:00-04:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+            "@type": "Place",
+            "name": "AVANCE BJJ",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Santa Cruz de la Sierra",
+                "addressRegion": "Santa Cruz",
+                "addressCountry": "BO"
+            }
+        },
+        "organizer": {
+            "@type": "SportsActivityLocation",
+            "name": "AVANCE BJJ",
+            "url": "https://avancebjj.com"
+        },
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Niños"
+        },
+        "maximumAttendeeCapacity": 15,
+        "image": "https://avancebjj.com/assets/images/campamento-bjj-kids.jpg",
+        "offers": {
+            "@type": "Offer",
+            "url": "https://avancebjj.com/campamento-invierno.html",
+            "availability": "https://schema.org/LimitedAvailability"
+        }
+    }
+    </script>
     <style>
         .camp-hero {
             padding: 8rem 2rem 4rem;
@@ -74,13 +129,59 @@
         .back-btn:hover {
             color: var(--accent-gold);
         }
+        
+        /* Tabs navigation */
+        .tabs-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .tab-btn {
+            background-color: transparent;
+            color: var(--accent-dark);
+            border: 2px solid var(--accent-dark);
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+        }
+        .tab-btn.active, .tab-btn:hover {
+            background-color: var(--accent-gold);
+            border-color: var(--accent-gold);
+            color: var(--accent-dark);
+        }
+        .week-content {
+            display: none;
+        }
+        .week-content.active-tab {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Alternating row colors */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+            transition: background-color 0.2s ease;
+        }
     </style>
 </head>
 <body>
     <header class="navbar scrolled">
         <div class="logo-container">
             <a href="index.html">
-                <img src="assets/images/avance-logo.jpg" alt="AVANCE BJJ Logo" class="nav-logo">
+                <img src="assets/images/header-logo.png" alt="AVANCE BJJ Logo" class="nav-logo">
             </a>
         </div>
         <nav class="nav-links">
@@ -106,146 +207,201 @@
                 
                 <img src="assets/images/campamento-bjj-kids.jpg" alt="Afiche Campamento BJJ Kids" class="camp-poster reveal">
                 
-                <a href="https://wa.me/" class="btn-primary" style="margin-bottom: 2rem;">Reserva tu Cupo por WhatsApp</a>
+                <a href="https://wa.me/59174580219" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-bottom: 2rem; font-size: 1.25rem; padding: 1rem 2.5rem; background-color: var(--accent-gold); color: var(--accent-dark); box-shadow: 0 10px 25px rgba(242, 194, 0, 0.4); text-transform: uppercase; font-weight: 700;">¡Reserva tu Cupo por WhatsApp!</a>
             </div>
         </section>
 
         <section class="table-container reveal">
             <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">Cronograma de Actividades</h2>
             
-            <table>
-                <tr>
-                    <td colspan="6" class="week-header">SEMANA 1 (7–11 jul) · FUNDAMENTOS: CUERPO Y MENTE</td>
-                </tr>
-                <tr>
-                    <th>Horario</th>
-                    <th>Lunes 6 jul</th>
-                    <th>Martes 7 jul</th>
-                    <th>Miércoles 8 jul</th>
-                    <th>Jueves 9 jul</th>
-                    <th>Viernes 10 jul</th>
-                </tr>
-                <tr>
-                    <td class="time-col">10:00 - 10:10</td>
-                    <td>Presentación, normas del dojo. Juego: 'Olas en el tatami'</td>
-                    <td>Repaso normas. Juego: 'Cocodrilo dormido'</td>
-                    <td>Calentamiento con rollo y cuadrupedia</td>
-                    <td>Juego: 'Empuja al monstruo' (base baja)</td>
-                    <td>Juego libre de movimiento 'Carrera de cangrejos'</td>
-                </tr>
-                <tr>
-                    <td class="time-col">10:10 - 10:30</td>
-                    <td>Posición base y cuadrupedia (breakfall delantero y lateral)</td>
-                    <td>Guardia cerrada: cómo cerrarla y mantenerla</td>
-                    <td>Side control: posición superior básica</td>
-                    <td>Posición de montada: estabilización y base</td>
-                    <td>Repaso de las 4 posiciones de la semana</td>
-                </tr>
-                <tr>
-                    <td class="time-col">10:30 - 10:50</td>
-                    <td>Drilling: rodar hacia adelante y atrás x 5 min; caída lateral x 5</td>
-                    <td>Drilling: abrir/cerrar guardia con compañero x 10 min</td>
-                    <td>Drilling: pasar a side control desde guardia caída</td>
-                    <td>Drilling: subir a montada desde side control x 10</td>
-                    <td>Circuito de posiciones: cada par rota 2 min por posición</td>
-                </tr>
-                <tr>
-                    <td class="time-col">10:50 - 11:05</td>
-                    <td>Juego: 'Sigue al instructor' (movimientos de grappling)</td>
-                    <td>Juego: 'Araña vs mosca' (guardia cerrada)</td>
-                    <td>Actividad: dibujar las posiciones del BJJ</td>
-                    <td>Juego: 'Rey de la montaña' (mantener posición 30 s)</td>
-                    <td>Quiz oral: ¿qué posición es? Instructor muestra, niños nombran</td>
-                </tr>
-                <tr>
-                    <td class="time-col">11:05 - 11:20</td>
-                    <td>King of the mat: mantener base (no dejarse voltear)</td>
-                    <td>Sparring posicional: empezar en guardia cerrada</td>
-                    <td>Sparring posicional: empezar en side control</td>
-                    <td>Sparring posicional: empezar en montada</td>
-                    <td>Mini torneo de posiciones completo (todas las semana)</td>
-                </tr>
-                <tr>
-                    <td class="time-col">11:20 - 11:30</td>
-                    <td>Valor del día: RESPETO. Entrega de estrella del día</td>
-                    <td>Valor: DISCIPLINA. Compromiso del tatami</td>
-                    <td>Valor: CONFIANZA. Cada niño dice algo que logró</td>
-                    <td>Valor: TRABAJO EN EQUIPO. Ronda de aplausos grupal</td>
-                    <td>Cierre semana 1: Confraternización con refrigerios de fruta.</td>
-                </tr>
-            </table>
+            <div id="week1" class="week-content active-tab">
+                <table>
+                    <tr>
+                        <td colspan="6" style="padding: 1rem; background-color: var(--bg-primary); border-bottom: none;">
+                            <div class="tabs-nav" style="margin-bottom: 0;">
+                                <button class="tab-btn tab-btn-week1 active" onclick="switchWeek(1)">Semana 1 (7–11 jul)</button>
+                                <button class="tab-btn tab-btn-week2" onclick="switchWeek(2)">Semana 2 (14–17 jul)</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="week-header">SEMANA 1 (7–11 jul) · FUNDAMENTOS: CUERPO Y MENTE</td>
+                    </tr>
+                    <tr>
+                        <th>Horario</th>
+                        <th>Lunes 6 jul</th>
+                        <th>Martes 7 jul</th>
+                        <th>Miércoles 8 jul</th>
+                        <th>Jueves 9 jul</th>
+                        <th>Viernes 10 jul</th>
+                    </tr>
+                    <tr>
+                        <td class="time-col">10:00 - 10:10</td>
+                        <td>Presentación, normas del dojo. Juego: 'Olas en el tatami'</td>
+                        <td>Repaso normas. Juego: 'Cocodrilo dormido'</td>
+                        <td>Calentamiento con rollo y cuadrupedia</td>
+                        <td>Juego: 'Empuja al monstruo' (base baja)</td>
+                        <td>Juego libre de movimiento 'Carrera de cangrejos'</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">10:10 - 10:30</td>
+                        <td>Posición base y cuadrupedia (breakfall delantero y lateral)</td>
+                        <td>Guardia cerrada: cómo cerrarla y mantenerla</td>
+                        <td>Side control: posición superior básica</td>
+                        <td>Posición de montada: estabilización y base</td>
+                        <td>Repaso de las 4 posiciones de la semana</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">10:30 - 10:50</td>
+                        <td>Drilling: rodar hacia adelante y atrás x 5 min; caída lateral x 5</td>
+                        <td>Drilling: abrir/cerrar guardia con compañero x 10 min</td>
+                        <td>Drilling: pasar a side control desde guardia caída</td>
+                        <td>Drilling: subir a montada desde side control x 10</td>
+                        <td>Circuito de posiciones: cada par rota 2 min por posición</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">10:50 - 11:05</td>
+                        <td>Juego: 'Sigue al instructor' (movimientos de grappling)</td>
+                        <td>Juego: 'Araña vs mosca' (guardia cerrada)</td>
+                        <td>Actividad: dibujar las posiciones del BJJ</td>
+                        <td>Juego: 'Rey de la montaña' (mantener posición 30 s)</td>
+                        <td>Quiz oral: ¿qué posición es? Instructor muestra, niños nombran</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">11:05 - 11:20</td>
+                        <td>King of the mat: mantener base (no dejarse voltear)</td>
+                        <td>Sparring posicional: empezar en guardia cerrada</td>
+                        <td>Sparring posicional: empezar en side control</td>
+                        <td>Sparring posicional: empezar en montada</td>
+                        <td>Mini torneo de posiciones completo (todas las semana)</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">11:20 - 11:30</td>
+                        <td>Valor del día: RESPETO. Entrega de estrella del día</td>
+                        <td>Valor: DISCIPLINA. Compromiso del tatami</td>
+                        <td>Valor: CONFIANZA. Cada niño dice algo que logró</td>
+                        <td>Valor: TRABAJO EN EQUIPO. Ronda de aplausos grupal</td>
+                        <td>Cierre semana 1: Confraternización con refrigerios de fruta.</td>
+                    </tr>
+                </table>
+            </div>
 
-            <table>
-                <tr>
-                    <td colspan="6" class="week-header">SEMANA 2 (14–17 jul) · TÉCNICAS Y COMPETENCIA AMISTOSA</td>
-                </tr>
-                <tr>
-                    <th>Horario</th>
-                    <th>Lunes 13 jul</th>
-                    <th>Martes 14 jul</th>
-                    <th>Miércoles 15 jul</th>
-                    <th>Jueves 16 jul</th>
-                    <th>Viernes 17 jul (CLAUSURA)</th>
-                </tr>
-                <tr>
-                    <td class="time-col">10:00 - 10:10</td>
-                    <td>Calentamiento: circuito de acrobacias BJJ</td>
-                    <td>Juego: 'Pulpo en el tatami' (ground movement)</td>
-                    <td>Calentamiento: rodar en grupo coordinado</td>
-                    <td>Calentamiento: 'a movernos como los animales'</td>
-                    <td>Calentamiento festivo: música + 'sacar los pasos prohibidos' (movimiento libre)</td>
-                </tr>
-                <tr>
-                    <td class="time-col">10:10 - 10:30</td>
-                    <td>Escape de montada: bridging (puente) y roll</td>
-                    <td>Barrida básica desde guardia cerrada (hip bump)</td>
-                    <td>Triángulo desde guardia: paso a paso adaptado kids</td>
-                    <td>Derribos básicos: Derribo a una y dos piernas.</td>
-                    <td>Repaso integral: escapes + barridas + sumisiones básicas</td>
-                </tr>
-                <tr>
-                    <td class="time-col">10:30 - 10:50</td>
-                    <td>Drilling: puente y rodar x 10 rep; escape elbow-knee</td>
-                    <td>Drilling: hip bump sweep con compañero x 10 rep c/lado</td>
-                    <td>Drilling: set-up del triángulo sin finalizar, solo posición</td>
-                    <td>Drilling: entrada a derribo (1 y 2 piernas)</td>
-                    <td>Práctica libre: cada niño elige su movimiento favorito</td>
-                </tr>
-                <tr>
-                    <td class="time-col">10:50 - 11:05</td>
-                    <td>Actividad: construir 'su combo' (2 movimientos)</td>
-                    <td>Juego: 'Barrer o no barrer' (decisión táctica)</td>
-                    <td>Video corto AOJ kids + discusión '¿qué viste?'</td>
-                    <td>Juego: Arrebatar el globo del tobillo de mi companñero</td>
-                    <td>Preparación torneo: explicación reglas y valores</td>
-                </tr>
-                <tr>
-                    <td class="time-col">11:05 - 11:20</td>
-                    <td>Sparring: aplicar escape de montada en rolling suave</td>
-                    <td>Sparring posicional: buscar la barrida</td>
-                    <td>Rolling completo 3 min (todos con todos, 1 ronda)</td>
-                    <td>Sparring de luchas</td>
-                    <td>TORNEO CLAUSURA: bouts de 2 min, formato round-robin</td>
-                </tr>
-                <tr>
-                    <td class="time-col">11:20 - 11:30</td>
-                    <td>Valor: PERSEVERANCIA. 'No me rindo en el tatami'</td>
-                    <td>Valor: HUMILDAD. 'Ganar y perder con honor'</td>
-                    <td>Valor: EVOLUCIÓN. 'Ayer yo, hoy mejor yo'</td>
-                    <td>Valor: TEMPLANZA. 'Pienso y luego actúo'</td>
-                    <td>CEREMONIA DE CLAUSURA: medallas, diplomas, fotos y palabras del instructor</td>
-                </tr>
-            </table>
+            <div id="week2" class="week-content">
+                <table>
+                    <tr>
+                        <td colspan="6" style="padding: 1rem; background-color: var(--bg-primary); border-bottom: none;">
+                            <div class="tabs-nav" style="margin-bottom: 0;">
+                                <button class="tab-btn tab-btn-week1" onclick="switchWeek(1)">Semana 1 (7–11 jul)</button>
+                                <button class="tab-btn tab-btn-week2 active" onclick="switchWeek(2)">Semana 2 (14–17 jul)</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="week-header">SEMANA 2 (14–17 jul) · TÉCNICAS Y COMPETENCIA AMISTOSA</td>
+                    </tr>
+                    <tr>
+                        <th>Horario</th>
+                        <th>Lunes 13 jul</th>
+                        <th>Martes 14 jul</th>
+                        <th>Miércoles 15 jul</th>
+                        <th>Jueves 16 jul</th>
+                        <th>Viernes 17 jul (CLAUSURA)</th>
+                    </tr>
+                    <tr>
+                        <td class="time-col">10:00 - 10:10</td>
+                        <td>Calentamiento: circuito de acrobacias BJJ</td>
+                        <td>Juego: 'Pulpo en el tatami' (ground movement)</td>
+                        <td>Calentamiento: rodar en grupo coordinado</td>
+                        <td>Calentamiento: 'a movernos como los animales'</td>
+                        <td>Calentamiento festivo: música + 'sacar los pasos prohibidos' (movimiento libre)</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">10:10 - 10:30</td>
+                        <td>Escape de montada: bridging (puente) y roll</td>
+                        <td>Barrida básica desde guardia cerrada (hip bump)</td>
+                        <td>Triángulo desde guardia: paso a paso adaptado kids</td>
+                        <td>Derribos básicos: Derribo a una y dos piernas.</td>
+                        <td>Repaso integral: escapes + barridas + sumisiones básicas</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">10:30 - 10:50</td>
+                        <td>Drilling: puente y rodar x 10 rep; escape elbow-knee</td>
+                        <td>Drilling: hip bump sweep con compañero x 10 rep c/lado</td>
+                        <td>Drilling: set-up del triángulo sin finalizar, solo posición</td>
+                        <td>Drilling: entrada a derribo (1 y 2 piernas)</td>
+                        <td>Práctica libre: cada niño elige su movimiento favorito</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">10:50 - 11:05</td>
+                        <td>Actividad: construir 'su combo' (2 movimientos)</td>
+                        <td>Juego: 'Barrer o no barrer' (decisión táctica)</td>
+                        <td>Video corto AOJ kids + discusión '¿qué viste?'</td>
+                        <td>Juego: Arrebatar el globo del tobillo de mi companñero</td>
+                        <td>Preparación torneo: explicación reglas y valores</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">11:05 - 11:20</td>
+                        <td>Sparring: aplicar escape de montada en rolling suave</td>
+                        <td>Sparring posicional: buscar la barrida</td>
+                        <td>Rolling completo 3 min (todos con todos, 1 ronda)</td>
+                        <td>Sparring de luchas</td>
+                        <td>TORNEO CLAUSURA: bouts de 2 min, formato round-robin</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">11:20 - 11:30</td>
+                        <td>Valor: PERSEVERANCIA. 'No me rindo en el tatami'</td>
+                        <td>Valor: HUMILDAD. 'Ganar y perder con honor'</td>
+                        <td>Valor: EVOLUCIÓN. 'Ayer yo, hoy mejor yo'</td>
+                        <td>Valor: TEMPLANZA. 'Pienso y luego actúo'</td>
+                        <td>CEREMONIA DE CLAUSURA: medallas, diplomas, fotos y palabras del instructor</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
         </section>
     </main>
 
     <!-- Footer / Social -->
-    <footer style="background-color: #050505; color: #fff; padding: 4rem 0 2rem; text-align: center;">
+    <footer role="contentinfo">
         <div class="container footer-content reveal">
-            <p class="copyright">&copy; 2026 AVANCE BJJ. Todos los derechos reservados.</p>
+            <div class="footer-logo">
+                <img src="assets/images/logo-footer.png" alt="AVANCE BJJ" class="footer-logo-img">
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/avance.bjj/" target="_blank" rel="noopener noreferrer" aria-label="Seguir a AVANCE BJJ en Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/avance.bjj" target="_blank" rel="noopener noreferrer" aria-label="Seguir a AVANCE BJJ en Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="https://www.tiktok.com/@avance.bjj" target="_blank" rel="noopener noreferrer" aria-label="Seguir a AVANCE BJJ en TikTok">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                    </svg>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2026 AVANCE BJJ. Santa Cruz de la Sierra - Bolivia.</p>
         </div>
     </footer>
 
     <script src="app.js"></script>
+    <script>
+        function switchWeek(weekNum) {
+            document.querySelectorAll('.week-content').forEach(el => el.classList.remove('active-tab'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById('week' + weekNum).classList.add('active-tab');
+            document.querySelectorAll('.tab-btn-week' + weekNum).forEach(el => el.classList.add('active'));
+        }
+    </script>
 </body>
 </html>

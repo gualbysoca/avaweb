@@ -1,0 +1,24 @@
+# robots.txt for AVANCE BJJ
+# https://avancebjj.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://avancebjj.com/sitemap.xml
+
+# Allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
