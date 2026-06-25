@@ -864,8 +864,24 @@ footer {
         display: block;
     }
 
+    .hero-logo-large {
+        width: 120px;
+        margin-bottom: 1rem;
+    }
+
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .carousel-slide .btn-primary {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
     }
 
     .section-title {
