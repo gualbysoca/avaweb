@@ -9,6 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Mobile Navigation (Hamburger)
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
     // Reveal elements on scroll
     const revealElements = document.querySelectorAll('.reveal');
 
@@ -67,6 +85,36 @@ document.addEventListener('DOMContentLoaded', () => {
             resetCarousel();
         });
     });
+
+    // Touch Swipe Logic for Carousel
+    const carouselContainer = document.querySelector('.hero-carousel-container');
+    if (carouselContainer) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselContainer.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carouselContainer.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        const handleSwipe = () => {
+            const swipeThreshold = 50;
+            if (touchStartX - touchEndX > swipeThreshold) {
+                // Swiped left, go to next
+                nextSlide();
+                resetCarousel();
+            } else if (touchEndX - touchStartX > swipeThreshold) {
+                // Swiped right, go to prev
+                let prevIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+                showSlide(prevIndex);
+                resetCarousel();
+            }
+        };
+    }
 
     if (slides.length > 0) {
         startCarousel();
