@@ -211,4 +211,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Product Gallery Thumbnail Switcher (Supports multiple galleries)
+    document.querySelectorAll('.product-gallery').forEach(gallery => {
+        const mainImg = gallery.querySelector('.product-main-image img');
+        const thumbBtns = gallery.querySelectorAll('.thumb-btn');
+        if (mainImg && thumbBtns.length > 0) {
+            thumbBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    thumbBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const newSrc = btn.getAttribute('data-img');
+                    if (newSrc) {
+                        mainImg.style.opacity = '0';
+                        setTimeout(() => {
+                            mainImg.src = newSrc;
+                            mainImg.alt = btn.querySelector('span')?.textContent || mainImg.alt;
+                            mainImg.style.opacity = '1';
+                        }, 150);
+                    }
+                });
+            });
+        }
+    });
 });
+
+
