@@ -19,11 +19,13 @@
     <meta property="og:title" content="AVANCE BJJ - Escuela de Brazilian Jiu Jitsu en Santa Cruz de la Sierra">
     <meta property="og:description"
         content="Academia especializada en Brazilian Jiu Jitsu. Clases para adultos y niños en Santa Cruz de la Sierra, Bolivia. ¡Agenda tu clase de prueba!">
-    <meta property="og:image" content="https://avancebjj.com/assets/images/avance-logo.jpg">
-    <meta property="og:image:secure_url" content="https://avancebjj.com/assets/images/avance-logo.jpg">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:alt" content="AVANCE BJJ Logo">
-    <meta itemprop="image" content="https://avancebjj.com/assets/images/avance-logo.jpg">
+    <meta property="og:image" content="https://avancebjj.com/assets/images/avance-logo-circular.png">
+    <meta property="og:image:secure_url" content="https://avancebjj.com/assets/images/avance-logo-circular.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:alt" content="AVANCE BJJ Logo Circular">
+    <meta itemprop="image" content="https://avancebjj.com/assets/images/avance-logo-circular.png">
     <meta property="og:locale" content="es_BO">
     <meta property="og:site_name" content="AVANCE BJJ">
 
@@ -32,7 +34,7 @@
     <meta name="twitter:title" content="AVANCE BJJ - Brazilian Jiu Jitsu en Santa Cruz">
     <meta name="twitter:description"
         content="Academia especializada en BJJ. Clases para adultos y niños. ¡Entrena con nosotros!">
-    <meta name="twitter:image" content="https://avancebjj.com/assets/images/avance-logo.jpg">
+    <meta name="twitter:image" content="https://avancebjj.com/assets/images/avance-logo-circular.png">
 
     <!-- Geo Tags -->
     <meta name="geo.region" content="BO-S">
@@ -49,17 +51,23 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
-    <!-- JSON-LD Structured Data: LocalBusiness + SportsActivityLocation -->
+    <!-- JSON-LD Structured Data: Organization + LocalBusiness + SportsActivityLocation -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": ["SportsActivityLocation", "LocalBusiness"],
+        "@type": ["SportsActivityLocation", "LocalBusiness", "Organization"],
         "name": "AVANCE BJJ",
         "alternateName": "AVANCE Brazilian Jiu Jitsu",
         "description": "Academia especializada en Brazilian Jiu Jitsu en Santa Cruz de la Sierra, Bolivia. Ofrecemos clases para adultos y niños con horarios flexibles de lunes a viernes.",
         "url": "https://avancebjj.com",
-        "logo": "https://avancebjj.com/assets/images/avance-logo.jpg",
-        "image": "https://avancebjj.com/assets/images/avance-logo.jpg",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://avancebjj.com/assets/images/avance-logo-circular.png",
+            "width": 1200,
+            "height": 1200,
+            "caption": "AVANCE BJJ Logo"
+        },
+        "image": "https://avancebjj.com/assets/images/avance-logo-circular.png",
         "telephone": "+59174580219",
         "priceRange": "$$",
         "address": {
