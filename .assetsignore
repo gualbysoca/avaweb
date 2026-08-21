@@ -1,2 +1,7 @@
 assets/*.apk
 *.apk
+.git
+.venv
+.DS_Store
+wrangler.toml
+*.md
