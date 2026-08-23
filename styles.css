@@ -794,17 +794,20 @@ footer {
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 0.5rem 1rem;
-        flex-direction: row;
-        justify-content: space-between;
+        padding: 0.5rem 1.5rem;
+        position: relative;
+        display: flex;
+        justify-content: flex-end; /* Pushes the hamburger to the right edge */
         align-items: center;
     }
 
     .logo-container {
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-        padding-left: 25px; /* Offset the hamburger width to perfectly center */
+        /* Absolutely center the logo to prevent it from pushing other elements */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-grow: 0;
+        padding-left: 0;
     }
 
     .nav-logo {
