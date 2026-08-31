@@ -4,6 +4,7 @@ const translations = {
         nav_philosophy: "Filosofía",
         nav_schedule: "Horarios",
         nav_pricing: "Membresías",
+        nav_timer: "Timer",
         nav_store: "Tienda",
         nav_location: "Ubicación",
         nav_camp: "Campamento BJJ Kids",
@@ -87,6 +88,16 @@ const translations = {
         store_rg_7: "Tratamiento anti-microbiano (moisture-wicking)",
 
         
+        // App Timer
+        timer_badge: "NUEVA APP OFICIAL",
+        timer_desc: "La app diseñada para tus entrenamientos de Jiu Jitsu. Configura rondas, tiempos de descanso y lleva el control de cada sparring desde tu celular.",
+        timer_feat1: "Configura rondas, tiempo y descanso a tu medida",
+        timer_feat2: "Modo retrato y paisaje para cualquier uso",
+        timer_feat3: "Señales de audio para cambios de ronda",
+        timer_feat4: "100% gratuita, exclusiva para miembros AVANCE",
+        timer_download_label: "Descargar APK",
+        timer_download_sub: "Android • Gratis",
+
         // Location
         loc_title: "Ubicación",
         loc_desc: "Ven a conocer nuestras nuevas instalaciones, solicita tu día de prueba y experimenta el ambiente de AVANCE BJJ.",
@@ -104,6 +115,7 @@ const translations = {
         nav_philosophy: "Philosophy",
         nav_schedule: "Schedule",
         nav_pricing: "Memberships",
+        nav_timer: "Timer",
         nav_store: "Store",
         nav_location: "Location",
         nav_camp: "BJJ Kids Camp",
@@ -182,6 +194,16 @@ const translations = {
         store_rg_7: "Anti-microbial moisture-wicking treatment",
 
         
+        // App Timer
+        timer_badge: "NEW OFFICIAL APP",
+        timer_desc: "The app designed for your Jiu Jitsu training sessions. Set rounds, rest times, and track every sparring from your phone.",
+        timer_feat1: "Customize rounds, time, and rest to your liking",
+        timer_feat2: "Portrait and landscape mode for any use",
+        timer_feat3: "Audio cues for round changes",
+        timer_feat4: "100% free, exclusive to AVANCE members",
+        timer_download_label: "Download APK",
+        timer_download_sub: "Android • Free",
+
         loc_title: "Location",
         loc_desc: "Come see our new facilities, request your trial day and experience the AVANCE BJJ environment.",
         loc_btn: "View on Google Maps",
@@ -197,6 +219,7 @@ const translations = {
         nav_philosophy: "Filosofia",
         nav_schedule: "Horários",
         nav_pricing: "Planos",
+        nav_timer: "Timer",
         nav_store: "Loja",
         nav_location: "Localização",
         nav_camp: "Acampamento BJJ Kids",
@@ -275,6 +298,16 @@ const translations = {
         store_rg_7: "Tratamento antimicrobiano (absorção de umidade)",
 
         
+        // App Timer
+        timer_badge: "NOVO APP OFICIAL",
+        timer_desc: "O app projetado para seus treinos de Jiu Jitsu. Configure rounds, tempos de descanso e controle cada sparring pelo celular.",
+        timer_feat1: "Configure rounds, tempo e descanso do seu jeito",
+        timer_feat2: "Modo retrato e paisagem para qualquer uso",
+        timer_feat3: "Sinais de áudio para mudanças de round",
+        timer_feat4: "100% gratuito, exclusivo para membros AVANCE",
+        timer_download_label: "Baixar APK",
+        timer_download_sub: "Android • Grátis",
+
         loc_title: "Localização",
         loc_desc: "Venha conhecer nossas novas instalações, solicite seu dia experimental e sinta o ambiente da AVANCE BJJ.",
         loc_btn: "Ver no Google Maps",
